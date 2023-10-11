@@ -51,6 +51,20 @@ header.header {
   -webkit-backdrop-filter: blur(10px);
 }
 
+a.btn-main {
+  transition: all 0.3s ease;
+}
+
+a.btn-main:hover {
+  background-color: #05050b !important;
+  color: white !important;
+}
+
+a.btn-main.selected {
+  background-color: #05050b !important;
+  color: white !important;
+}
+
 .menu-mobile {
   display: inline-block;
   position: absolute;

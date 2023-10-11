@@ -1,4 +1,6 @@
 // import gsap from 'gsap'
+// import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 function header() {
   // const headerTag = document.querySelector('.header')
@@ -25,6 +27,31 @@ function header() {
   //     fadeBox()
   //   })
   // }
+
+  // test section active :
+  const names = ['services', 'processus', 'tarifs', 'about', 'faq', 'contact']
+
+  names.forEach((name) => {
+    let section = document.querySelector('#' + name)
+    let nav = document.querySelector('#btn-' + name)
+    // for class toggling - we'll trigger when it's 40% from the top
+    ScrollTrigger.create({
+      trigger: section,
+      start: 'top 40%',
+      end: 'bottom 40%',
+      toggleClass: { targets: nav, className: 'selected' },
+    })
+
+    // for clicking the nav and animating to the correct spot
+    // let trigger = ScrollTrigger.create({
+    //   trigger: section,
+    //   start: 'top top',
+    // })
+    // nav.addEventListener('click', (e) => {
+    //   e.preventDefault()
+    //   gsap.to(window, { scrollTo: trigger.start })
+    // })
+  })
 
   // mobile menu :
   const button = document.querySelector('.btn-menu-mobile')
