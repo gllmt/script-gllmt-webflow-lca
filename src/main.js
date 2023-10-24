@@ -15,7 +15,7 @@ import sectionFaq from './features/sectionFaq'
 import './styles/style.css'
 
 // main js :
-console.log('main.js test')
+// console.log('prod : main.js')
 
 gsap.registerPlugin(ScrollTrigger)
 
